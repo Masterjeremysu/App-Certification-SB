@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen text-gray-800;
+}
+
+h1, h2, h3 {
+  @apply font-bold text-gray-900;
+}
+
+input, button {
+  @apply rounded-lg border-gray-300 focus:ring-blue-500 transition;
+}
+
+button {
+  @apply px-4 py-2 font-medium;
+}
+
+button:disabled {
+  @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-lg p-6;
+}

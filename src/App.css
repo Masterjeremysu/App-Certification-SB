@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====🎨 Thème global CSS variables===== */
+:root {
+  --color-primary: #2563eb;     /* Bleu vif */
+  --color-secondary: #1e40af;   /* Bleu foncé */
+  --color-accent: #3b82f6;      /* Bleu clair */
+  --color-muted: #94a3b8;       /* Gris clair */
+  --color-background: #f9fafb;  /* Fond très clair */
+  --color-text: #1f2937;        /* Texte gris foncé */
+}
+
+/* =====🧼 Reset + base ===== */
+html,
+body {
+  @apply min-h-screen bg-[var(--color-background)] text-[var(--color-text)] antialiased;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* =====🌐 Conteneur principal ===== */
+#root {
+  @apply max-w-4xl mx-auto px-4 py-8;
+}
+
+/* =====💎 Boutons standards ===== */
+.btn-primary {
+  @apply bg-[var(--color-primary)] text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[var(--color-secondary)] transition;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-300 transition;
+}
+
+.btn-disabled {
+  @apply bg-gray-100 text-gray-400 cursor-not-allowed;
+}
+
+/* =====📦 Cartes / blocs ===== */
+.card {
+  @apply bg-white rounded-xl shadow-md p-6 border border-gray-100;
+}
+
+/* =====📌 Titre de section ===== */
+.section-title {
+  @apply text-2xl font-bold text-[var(--color-secondary)] mb-4;
+}
+
+/* =====✨ Animation douce d'apparition ===== */
+.fade-in {
+  animation: fadeIn 0.5s ease-out both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====💡 Utilitaire texte réduit ===== */
+.text-muted {
+  @apply text-sm text-gray-500;
+}

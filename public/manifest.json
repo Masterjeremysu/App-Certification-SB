@@ -1,0 +1,27 @@
+{
+  "name": "Formation Salle Propre",
+  "short_name": "Salle Propre",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0f4ff",
+  "theme_color": "#1E40AF",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "description": "Application de gestion de formation pour les salles propres",
+  "version": "1.0.0",
+  "author": "Jérémy",
+  "license": "MIT",
+  "homepage": "https://votre-site-web.com",
+  "keywords": ["formation", "salle propre", "gestion", "application web"]
+}
