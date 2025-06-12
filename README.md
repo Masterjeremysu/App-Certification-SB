@@ -1,6 +1,6 @@
 # App-Certification-SB
 
-[Logo GT LOGISTICS]
+![favicon](https://github.com/user-attachments/assets/6886baba-9b82-4872-8691-ee9555ea6a45)
 
 ## 🚀 Présentation
 
