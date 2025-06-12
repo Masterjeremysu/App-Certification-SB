@@ -1,105 +1,90 @@
-# 🧪 Formation Salle Propre – QCM interactif
+# App-Certification-SB
 
-Une application web moderne pour sensibiliser les opérateurs aux bonnes pratiques en salle propre à travers un **quiz interactif** avec **attestation PDF** personnalisée en fin de session.
+[Logo GT LOGISTICS]
 
----
+## 🚀 Présentation
 
-## 🚀 Stack technique
-
-| Technologie    | Description                                              |
-|----------------|----------------------------------------------------------|
-| [React](https://reactjs.org/)          | UI dynamique et modulaire                             |
-| [Vite](https://vitejs.dev/)            | Serveur de dev ultra rapide                           |
-| [TypeScript](https://www.typescriptlang.org/) | Typage strict et sécurité de développement     |
-| [TailwindCSS](https://tailwindcss.com/)| Style moderne et responsive en utilitaires            |
-| [Supabase](https://supabase.com/)      | Auth, base de données & stockage cloud                |
-| [jsPDF](https://github.com/parallax/jsPDF) | Génération d’attestation PDF offline                 |
+**App-Certification-SB** est une application web complète et moderne conçue pour réaliser un **QCM de sensibilisation à la contamination en salle propre**, avec génération automatique d’attestations PDF et gestion avancée des résultats.  
+Développée avec **React**, **TypeScript**, **Vite** et **TailwindCSS**, cette application allie performance, ergonomie et design professionnel.
 
 ---
 
-## 🧰 Installation locale
+## ✨ Fonctionnalités principales
+
+- **Formulaire d’identification** simple et sécurisé
+- **Questionnaire à choix multiples (QCM)** avec navigation fluide et validation instantanée
+- **Calcul automatique du score** avec seuil de réussite configurable
+- **Génération dynamique d’attestation PDF** personnalisée, téléchargeable
+- **Sauvegarde et consultation des résultats** dans une base de données Supabase
+- **Tableau de bord administrateur** avec statistiques, filtres, et export CSV
+- **Interface responsive** et expérience utilisateur fluide sur tous supports
+
+---
+
+## 📦 Technologies utilisées
+
+- **React 19 + TypeScript** pour un frontend robuste et typé
+- **Vite** pour un bundler rapide et une expérience de développement ultra fluide
+- **TailwindCSS 3.4** pour un design moderne et facilement personnalisable
+- **Supabase** pour l’authentification, la gestion des données et le stockage
+- **jsPDF** pour la génération des attestations PDF dynamiques
+- **Lucide-React** pour les icônes modernes et légères
+
+---
+
+## ⚙️ Installation et lancement
 
 ```bash
-# 1. Cloner le projet
-git clone https://github.com/ton-org/formation-salle-propre.git
-cd formation-salle-propre
+# Cloner le dépôt
+git clone https://github.com/Masterjeremysu/App-Certification-SB.git
 
-# 2. Installer les dépendances
+# Se positionner dans le dossier
+cd App-Certification-SB
+
+# Installer les dépendances
 npm install
 
-# 3. Lancer le serveur de dev
+# Lancer l'application en mode développement
 npm run dev
+🛠 Configuration
+Crée un projet Supabase et configure ta base avec la migration SQL fournie (supabase/migrations/20250612093906_humble_temple.sql).
 
-📁 Arborescence principale
+Copie .env.example en .env et renseigne les clés d’API Supabase (VITE_SUPABASE_URL et VITE_SUPABASE_ANON_KEY).
 
-formation-salle-propre/
-├── public/                 # Assets statiques
-├── src/
-│   ├── components/         # Composants React (Quiz, Header, Résultats...)
-│   ├── lib/                # Supabase & génération PDF
-│   ├── types/              # Interfaces TypeScript (`User`, `QuizResult`, etc.)
-│   ├── App.tsx            # Entrée principale de l'app
-│   └── main.tsx           # Bootstrapping React
-├── index.html
-├── tailwind.config.js
-├── tsconfig.*.json
-└── vite.config.ts
+Assure-toi d’avoir Node.js 18+ et npm 9+ pour éviter les incompatibilités.
 
-🧾 Fonctionnalités
+Le projet est configuré avec des règles ESLint strictes et TailwindCSS.
 
-✅ Identification par prénom, nom, formateur, date
+🧑‍💻 Structure du projet
 
-✅ 36 questions aléatoires à choix multiple
+src/
+ ├─ components/       # Composants React (Formulaire, Quiz, Résultats, Admin)
+ ├─ lib/              # Fonctions utilitaires (Supabase, génération PDF)
+ ├─ types/            # Interfaces TypeScript pour types et données
+ ├─ index.css          # Styles globaux Tailwind
+ ├─ main.tsx           # Point d'entrée React
+ └─ App.tsx            # Gestionnaire d’états principal (états et navigation)
 
-✅ Calcul automatique du score et validation
+📈 Améliorations possibles
 
-✅ Attestation PDF téléchargeable avec :
+Ajout d’une interface d’administration avancée avec gestion utilisateurs
 
-Prénom / nom
+Authentification sécurisée et profils personnalisés
 
-Score obtenu / total
+Support multilingue
 
-Signature / date / formateur
+Envoi automatique d’attestations par e-mail
 
-✅ Compatible desktop et tablette
+Tableau de bord avec graphiques et suivi temps réel
 
-✅ Sauvegarde dans Supabase (optionnel)
+🤝 Contribution
 
-📦 Build production
-bash
-Copier
-Modifier
-npm run build
+Contributions, suggestions et issues sont les bienvenues !
+Merci de respecter les bonnes pratiques et le style du code.
 
-🔐 Configuration Supabase (optionnel)
-Crée un fichier .env à la racine :
+⚖️ Licence
+MIT © 2025 Jérémy, GT LOGISTICS
 
-env
+Une application pensée pour la qualité, la sécurité et la simplicité, avec un code clair et performant.
 
-VITE_SUPABASE_URL=https://xxxx.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOi...
-
-🎯 Lint et bonnes pratiques
-Le projet est configuré avec :
-
-strict: true TypeScript
-
-verbatimModuleSyntax: true (TypeScript 5.5)
-
-noUnusedLocals, noUncheckedSideEffectImports, etc.
-
-tailwind.config.js avec purge automatique (content bien rempli)
-
-✨ Améliorations possibles
-
-📊 Tableau de bord administrateur pour voir les scores
-
-✍️ Signature électronique
-
-📧 Envoi automatique de l’attestation par e-mail
-
-📱 Mode hors-ligne PWA
-
-👨‍💼 Auteur
-
-Projet développé par GT Logistics – Conversion et refonte moderne pilotée par Jérémy.
+GT LOGISTICS - Formation Salle Propre
