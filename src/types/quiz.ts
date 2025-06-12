@@ -11,6 +11,7 @@ export interface Question {
   question: string;
   options: string[];
   correctAnswer: number; // Index 0-based
+  explanation?: string;
 }
 
 export interface QuizResult {
